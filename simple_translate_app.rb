@@ -4,8 +4,8 @@ require 'json'
 require 'tty-prompt'
 
 
-def translater(languages)
-        uri = URI("https://api.mymemory.translated.net/get?q=Hello World!&langpair=#{language}|#{language}")
+def translater(src_l, trg_l)
+        uri = URI("https://api.mymemory.translated.net/get?q=Hello World!&langpair=#{src_l}|#{trg_l}")
         response = Net::HTTP.get_response(uri)
 
         parsed_response = JSON.parse(response.body)
