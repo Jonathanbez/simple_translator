@@ -8,15 +8,16 @@ class Translate
                 uri = URI("https://api.mymemory.translated.net/get?q=#{src_sentence}&langpair=#{src_l}|#{trg_l}")
                 response = Net::HTTP.get_response(uri)
 
-                begin
+                if
                         response.is_a?(Net::HTTPSuccess)
                         parsed_response = JSON.parse(response.body)
                         translated_text = parsed_response["responseData"]["translatedText"]
                         return translated_text
-                rescue
+                else
                         response.is_a(Net::HTTPError)
                         error_response = JSON.parse(response.body)
                         error_status = error_response["responseStatus"]
+                        return error_status                
                 end
 
         end
@@ -34,16 +35,4 @@ src_sentence = gets.chomp
 
 translater = Translate.new
 translater.translater(src_sentence, src_l, trg_l)
-
-
-begin
-        parsed_response = JSON.parse(response)
-    rescue JSON::ParserError
-        puts "Error parsing the API response."
-        return
-    end
-
-    #system 'clear'
-    puts "API returned an error: #{parsed_response['error']['info']}"
-        
-        
+ 
