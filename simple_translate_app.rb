@@ -34,5 +34,5 @@ prompt = TTY::Prompt.new
 src_sentence = gets.chomp
 
 translater = Translate.new
-translater.translater(src_sentence, src_l, trg_l)
+puts translater.translater(src_sentence, src_l, trg_l)
  
