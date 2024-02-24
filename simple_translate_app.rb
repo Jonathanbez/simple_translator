@@ -11,12 +11,13 @@ class Translate
                 if
                         response.is_a?(Net::HTTPSuccess)
                         parsed_response = JSON.parse(response.body)
-                        translated_text = parsed_response
-                        return translated_text
+                        translated_text = parsed_response["responseData"]["translatedText"]
+                        create_date = parsed_response["responseData"]["matches"][0]["create-date"]
+                        return translated_text, create_date
                 else
                         response.is_a(Net::HTTPError)
                         error_response = JSON.parse(response.body)
-                        error_status = error_response["responseStatus"]
+                        error_status = error_response
                         return error_status                
                 end
 
