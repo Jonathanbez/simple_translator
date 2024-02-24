@@ -20,9 +20,9 @@ prompt = TTY::Prompt.new
         puts "\n"
         trg_l = prompt.select("select the targed language:", languages)
 
-translater(src_l, trg_l)
+
 
 src_sentence = gets.chomp
-
+translater(src_sentence, src_l, trg_l)
         
         
