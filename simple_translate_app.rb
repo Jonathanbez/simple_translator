@@ -5,7 +5,7 @@ require 'tty-prompt'
 
 
 def translater(src_l, trg_l)
-        uri = URI("https://api.mymemory.translated.net/get?q=Hello World!&langpair=#{src_l}|#{trg_l}")
+        uri = URI("https://api.mymemory.translated.net/get?q=#{src_sentence}&langpair=#{src_l}|#{trg_l}")
         response = Net::HTTP.get_response(uri)
 
         parsed_response = JSON.parse(response.body)
@@ -21,6 +21,8 @@ prompt = TTY::Prompt.new
         trg_l = prompt.select("select the targed language:", languages)
 
 translater(src_l, trg_l)
+
+src_sentence = gets.chomp
 
         
         
