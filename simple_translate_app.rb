@@ -3,15 +3,16 @@ require 'net/http'
 require 'json'
 require 'tty-prompt'
 
+class Translate
+        def translater(src_sentence, src_l, trg_l)
+                uri = URI("https://api.mymemory.translated.net/get?q=#{src_sentence}&langpair=#{src_l}|#{trg_l}")
+                response = Net::HTTP.get_response(uri)
 
-def translater(src_sentence, src_l, trg_l)
-        uri = URI("https://api.mymemory.translated.net/get?q=#{src_sentence}&langpair=#{src_l}|#{trg_l}")
-        response = Net::HTTP.get_response(uri)
-
-        parsed_response = JSON.parse(response.body)
-        
-        translated_text = parsed_response["responseData"]["translatedText"]
-        puts translated_text
+                parsed_response = JSON.parse(response.body)
+                
+                translated_text = parsed_response["responseData"]["translatedText"]
+                puts translated_text
+        end
 end
 
 prompt = TTY::Prompt.new
@@ -23,6 +24,8 @@ prompt = TTY::Prompt.new
 
 
 src_sentence = gets.chomp
-translater(src_sentence, src_l, trg_l)
+
+translater = Translate.new
+tranlater.tranlater(src_sentence, src_l, trg_l)
         
         
