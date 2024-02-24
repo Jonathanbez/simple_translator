@@ -8,10 +8,17 @@ class Translate
                 uri = URI("https://api.mymemory.translated.net/get?q=#{src_sentence}&langpair=#{src_l}|#{trg_l}")
                 response = Net::HTTP.get_response(uri)
 
-                parsed_response = JSON.parse(response.body)
-                
-                translated_text = parsed_response["responseData"]["translatedText"]
-                puts translated_text
+                begin
+                        response.is_a?(Net::HTTPSuccess)
+                        parsed_response = JSON.parse(response.body)
+                        translated_text = parsed_response["responseData"]["translatedText"]
+                        return translated_text
+                rescue
+                        response.is_a(Net::HTTPError)
+                        error_response = JSON.parse(response.body)
+                        error_status = error_response["responseStatus"]
+                end
+
         end
 end
 
@@ -26,6 +33,17 @@ prompt = TTY::Prompt.new
 src_sentence = gets.chomp
 
 translater = Translate.new
-tranlater.tranlater(src_sentence, src_l, trg_l)
+translater.translater(src_sentence, src_l, trg_l)
+
+
+begin
+        parsed_response = JSON.parse(response)
+    rescue JSON::ParserError
+        puts "Error parsing the API response."
+        return
+    end
+
+    #system 'clear'
+    puts "API returned an error: #{parsed_response['error']['info']}"
         
         
