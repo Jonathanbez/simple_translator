@@ -33,7 +33,11 @@ prompt = TTY::Prompt.new
 
 src_sentence = gets.chomp
 
-class Save_text
+
+translater = Translator.new
+puts translater.translater(src_sentence, src_l, trg_l)
+
+class save_log
         def save_log(src_sentence, translater)
                 time = Time.now
                 name = time.strftime("%d/%m/%Y %H:%m:%S")
@@ -43,7 +47,3 @@ class Save_text
                 end
         end
 end
-
-
-translater = Translator.new
-puts translater.translater(src_sentence, src_l, trg_l)
