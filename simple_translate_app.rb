@@ -1,11 +1,8 @@
 require 'net/http'
 require 'json'
 require 'tty-prompt'
-require 'translator'
-require 'log'
-
-
-
+require_relative 'translator'
+require_relative 'log'
 
 prompt = TTY::Prompt.new
 languages = %w[en pt-BR es fr]
@@ -17,7 +14,6 @@ src_sentence = gets.chomp
 
 translater_output = Translator.new
 puts translater_output.translater(src_sentence, src_l, trg_l)
-
 
 
 s_file = Saver_text.new

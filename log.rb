@@ -1,4 +1,4 @@
-require 'simple_translate_app'
+require_relative 'simple_translate_app'
 
 class Saver_text
   def save_log(src_sentence, translater_output)

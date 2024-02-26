@@ -1,4 +1,4 @@
-require 'simple_translate_app'
+require_relative 'simple_translate_app'
 
 class Translator
   def translater(src_sentence, src_l, trg_l)
