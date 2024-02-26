@@ -39,7 +39,8 @@ class Save_text
                 name = time.strftime("%d/%m/%Y %H:%m:%S")
                 File.open("#{name}.txt", 'w') do |put|
                         put.puts "Input text: #{src_sentence}"
-                        put.puts "Output text: #{translater}
+                        put.puts "Output text: #{translater}"
+                end
         end
 end
 
