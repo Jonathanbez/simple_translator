@@ -3,7 +3,7 @@ require 'net/http'
 require 'json'
 require 'tty-prompt'
 
-class Translate
+class Translator
         def translater(src_sentence, src_l, trg_l)
                 uri = URI("https://api.mymemory.translated.net/get?q=#{src_sentence}&langpair=#{src_l}|#{trg_l}")
                 response = Net::HTTP.get_response(uri)
@@ -12,8 +12,7 @@ class Translate
                         response.is_a?(Net::HTTPSuccess)
                         parsed_response = JSON.parse(response.body)
                         translated_text = parsed_response["responseData"]["translatedText"]
-                        create_date = parsed_response["responseData"]["matches"][0]["create-date"]
-                        return translated_text, create_date
+                        return translated_text
                 else
                         response.is_a(Net::HTTPError)
                         error_response = JSON.parse(response.body)
@@ -34,6 +33,6 @@ prompt = TTY::Prompt.new
 
 src_sentence = gets.chomp
 
-translater = Translate.new
+translater = Translator.new
 puts translater.translater(src_sentence, src_l, trg_l)
  
