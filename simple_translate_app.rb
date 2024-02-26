@@ -17,7 +17,7 @@ class Translator
                         response.is_a(Net::HTTPError)
                         error_response = JSON.parse(response.body)
                         error_status = error_response
-                        return error_status                
+                        return error_status
                 end
 
         end
@@ -39,12 +39,10 @@ class Save_text
                 name = time.strftime("%d/%m/%Y %H:%m:%S")
                 File.open("#{name}.txt", 'w') do |put|
                         put.puts "Input text: #{src_sentence}"
-                        put.puts "Output text: #{translater}"
-                end
+                        put.puts "Output text: #{translater}
         end
 end
 
 
 translater = Translator.new
 puts translater.translater(src_sentence, src_l, trg_l)
-
