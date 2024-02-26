@@ -37,9 +37,13 @@ class Save_text
         def save_log(src_sentence, translater)
                 time = Time.now
                 name = time.strftime("%d/%m/%Y %H:%m:%S")
-                File.open("#{name}.txt", 'w') do |p|
-                p.puts "Input text: #{src_sentence}"
-                p.puts "Output text: #{translater}"
+                File.open("#{name}.txt", 'w') do |put|
+                        put.puts "Input text: #{src_sentence}"
+                        put.puts "Output text: #{translater}"
+                end
+        end
+end
+
 
 translater = Translator.new
 puts translater.translater(src_sentence, src_l, trg_l)
