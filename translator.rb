@@ -1,4 +1,7 @@
-require_relative 'simple_translate_app'
+require 'net/http'
+require 'json'
+require 'tty-prompt'
+
 
 class Translator
   def translater(src_sentence, src_l, trg_l)

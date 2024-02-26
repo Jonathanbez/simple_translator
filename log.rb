@@ -1,4 +1,4 @@
-require_relative 'simple_translate_app'
+require 'tty-prompt'
 
 class Saver_text
   def save_log(src_sentence, translater_output)
