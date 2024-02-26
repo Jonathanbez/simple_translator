@@ -1,6 +1,9 @@
 require 'net/http'
 require 'json'
 require 'tty-prompt'
+require 'translator'
+require 'log'
+
 
 class Translator
   def translater(src_sentence, src_l, trg_l)
@@ -29,16 +32,7 @@ src_sentence = gets.chomp
 translater_output = Translator.new
 puts translater_output.translater(src_sentence, src_l, trg_l)
 
-class Saver_text
-  def save_log(src_sentence, translater_output)
-    time = Time.now
-    name = time.strftime('%d-%m-%Y %H.%M.%S')
-    File.open("#{name}.txt", 'w') do |saver|
-      saver.puts "Input text: #{src_sentence}"
-      saver.puts "Output text: #{translater_output}"
-    end
-  end
-end
+
 
 s_file = Saver_text.new
 s_file.save_log(src_sentence, translater_output)

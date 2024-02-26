@@ -1,0 +1,2 @@
+Input text: hi i'm developer
+Output text: #<Translator:0x00007f6055d399d0>
