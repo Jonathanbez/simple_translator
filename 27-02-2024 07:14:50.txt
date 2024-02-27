@@ -1,2 +1,0 @@
-Input text: hi i'm
-Output text: #<Translator:0x00007f3921a975e8>
