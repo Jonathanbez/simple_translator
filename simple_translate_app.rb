@@ -15,4 +15,4 @@ puts translater_output.translater(src_sentence, src_l, trg_l)
 
 
 s_file = Saver_text.new
-s_file.save_log(src_sentence, translater_output)
+s_file.save_log(src_sentence, translater_output.to_s)
