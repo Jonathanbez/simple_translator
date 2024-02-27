@@ -13,9 +13,7 @@ class Translator
       parsed_response = call['responseData']['translatedText']
       return parsed_response
     else
-      #response.is_a(Net::HTTPError)
-      #JSON.parse(response.body)
-      #raise "API request failed with status code: #{response.code}"
+      raise "API request failed. ERROR:#{reponse.code}"
     end
   end
 end

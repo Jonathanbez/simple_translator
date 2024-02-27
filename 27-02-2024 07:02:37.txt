@@ -1,0 +1,2 @@
+Input text: 55
+Output text: #<Translator:0x00007fc620baffc0>
