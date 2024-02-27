@@ -1,0 +1,2 @@
+Input text: **++
+Output text: #<Translator:0x00007fa8405534e0>
