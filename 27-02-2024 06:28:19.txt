@@ -1,0 +1,2 @@
+Input text: 5518
+Output text: #<Translator:0x00007fa5fb8378b0>

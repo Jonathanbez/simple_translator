@@ -13,9 +13,11 @@ class Translator
       parsed_response = call['responseData']['translatedText']
       return parsed_response
     else
-      response.is_a(Net::HTTPError)
-      error = JSON.parse(response.body)
-      return error
+      #response.is_a?(Net::HTTPError)
+      #error = JSON.parse(response.body)
+      return call['error']['info']
+      #JSON::ParserError
+      #return error
     end
   end
 end
