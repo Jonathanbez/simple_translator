@@ -4,6 +4,10 @@ require_relative 'log'
 
 puts "SIMPLE TRANSLATER APP\n\n"
 
+select_tps_trlt = TTY::Prompt.new
+tps = %w(out insert)
+
+
 select_lang = TTY::Prompt.new
 languages = %w[en pt-BR es fr]
 src_l = select_lang.select('Select your source language:', languages)
