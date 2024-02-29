@@ -33,4 +33,4 @@ end
 
 puts output
 s_file = Saver_text.new
-s_file.save_log(src_sentence, output)
+s_file.save_log(src_sentence, output) 
