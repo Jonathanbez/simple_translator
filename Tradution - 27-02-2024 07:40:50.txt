@@ -1,2 +1,0 @@
-Input text: hi you look great
-Output text: Você está ótimo.

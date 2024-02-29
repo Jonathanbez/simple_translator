@@ -1,2 +1,0 @@
-Input text: i go eat breakfast
-Output text: eu vou tomar café da manhã

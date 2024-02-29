@@ -1,2 +1,0 @@
-Input text: i'm so glad
-Output text: Fico tão feliz.

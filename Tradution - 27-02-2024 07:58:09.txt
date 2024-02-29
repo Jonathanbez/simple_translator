@@ -1,2 +1,0 @@
-Input text: ok
-Output text: PLEASE SELECT TWO DISTINCT LANGUAGES
