@@ -2,10 +2,8 @@
 require_relative 'translator'
 require_relative 'log'
 
-puts "SIMPLE TRANSLATER APP\n\n"
 
-select_tps_trlt = TTY::Prompt.new
-tps = %w(out insert)
+
 
 
 select_lang = TTY::Prompt.new
@@ -14,11 +12,24 @@ src_l = select_lang.select('Select your source language:', languages)
 puts "\n"
 trg_l = select_lang.select('select the targed language:', languages)
 
-puts "Write your sentence:"
-src_sentence = gets.chomp
 
-translater_output = Translator.new
-output = translater_output.translater(src_sentence, src_l, trg_l)
+
+loop do
+  puts "SIMPLE TRANSLATER APP\n\n"
+
+  puts "Write your sentence:"
+  src_sentence = gets.chomp
+
+  translater_output = Translator.new
+  output = translater_output.translater(src_sentence, src_l, trg_l)
+  loop_prompt = TTY::Prompt.new
+  select = %w('Yes', 'No')
+  loop_prompt.mult_select("Do you want to try again?", select)
+  break if
+    select == 'No'
+end
+
+
 
 puts output
 s_file = Saver_text.new
