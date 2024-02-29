@@ -4,11 +4,11 @@ require_relative 'log'
 
 puts "SIMPLE TRANSLATER APP\n\n"
 
-prompt = TTY::Prompt.new
+select_lang = TTY::Prompt.new
 languages = %w[en pt-BR es fr]
-src_l = prompt.select('Select your source language:', languages)
+src_l = select_lang.select('Select your source language:', languages)
 puts "\n"
-trg_l = prompt.select('select the targed language:', languages)
+trg_l = select_lang.select('select the targed language:', languages)
 
 puts "Write your sentence:"
 src_sentence = gets.chomp
