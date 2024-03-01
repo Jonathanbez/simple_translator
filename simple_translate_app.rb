@@ -2,7 +2,6 @@
 require_relative 'translator'
 require_relative 'log'
 require 'tty-prompt'
-require 'tty-box'
 
 loop do
   system 'clear'
