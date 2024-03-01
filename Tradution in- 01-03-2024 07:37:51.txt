@@ -1,2 +1,0 @@
-Input text: hello i'm a developer
-Output text: olá, eu sou um desenvolvedor
