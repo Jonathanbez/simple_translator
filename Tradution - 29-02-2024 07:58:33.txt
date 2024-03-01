@@ -1,2 +1,0 @@
-Input text: Hello, i'm so glad, its you?
-Output text: Olá, estou tão feliz, é você?

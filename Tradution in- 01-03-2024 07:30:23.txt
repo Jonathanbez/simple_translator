@@ -1,0 +1,2 @@
+Input text: One Monday afternoon, Mike, adopting a very unusual style, wore a hoody. Nobody would ever think of wearing a hoody on a very hot day. His friends also wondered why he was being weird.
+Output text: Un lundi après-midi, Mike, adoptant un style très inhabituel, portait un sweat à capuche. Personne ne penserait jamais à porter un sweat à capuche par une journée très chaude. Ses amis se demandaient aussi pourquoi il était bizarre.
