@@ -46,3 +46,4 @@ loop do
     select_loop = loop_prompt.select("\nDO YOU WANT TO TRY AGAIN".colorize(:blue), select)
   break if select_loop == 'NO'
 end
+
