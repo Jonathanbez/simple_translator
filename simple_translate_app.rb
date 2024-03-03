@@ -10,10 +10,18 @@ loop do
     puts "SIMPLE TRANSLATER APP(Supports UTF-8 encoding and a maximum of 500 bytes)\n\n".colorize(:blue)
 
     select_lang = TTY::Prompt.new
-    languages = ['en', 'es', 'pt-BR', 'fr', 'it', 'ja']
-    src_l = select_lang.select("SELECT YOUR SOURCE LANGUAGE:\n".colorize(:blue), languages)
-    trg_l = select_lang.select("SELECT THE TARGED LANGUAGE:\n".colorize(:blue), languages)
+    languages = {
+    'en' => "English",
+    'es' => "Spanish",
+    'pt-BR' => "Brazilian Portuguese",
+    'fr' => "French",
+    'it' => "Italian",
+    'ja' => "Japanese"}
 
+    src_l = select_lang.select("SELECT YOUR SOURCE LANGUAGE:\n".colorize(:blue), languages.values)
+    src_l_key = languages.key(src_l)
+    trg_l = select_lang.select("SELECT THE TARGED LANGUAGE:\n".colorize(:blue), languages.values)
+    trg_l_key = languages.key(trg_l)
     if src_l == trg_l
       puts "PLEASE SELECT TWO DISTINCT LANGUAGES".colorize(:red)
       next
@@ -28,7 +36,7 @@ loop do
     spinner.auto_spin
 
     translater_output = Translator.new
-    output = translater_output.translater(src_sentence, src_l, trg_l)
+    output = translater_output.translater(src_sentence, src_l_key, trg_l_key)
 
     spinner.success("Successful!\n".colorize(:green))
 
