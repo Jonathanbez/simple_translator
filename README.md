@@ -11,8 +11,8 @@
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/Jonathanbez/simple_translator">
   
   <a href="https://github.com/Jonathanbez/rates_app">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Jonathanbez/simple_translator>
-  </a>
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Jonathanbez/simple_translator">
+</a>
   
   
 <p align="center">
