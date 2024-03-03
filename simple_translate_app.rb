@@ -10,9 +10,10 @@ loop do
     puts "SIMPLE TRANSLATER APP(Supports UTF-8 encoding and a maximum of 500 bytes)\n\n".colorize(:blue)
 
     select_lang = TTY::Prompt.new
-    languages = ['en', 'pt-BR', 'es', 'fr']
+    languages = ['en', 'es', 'pt-BR', 'fr', 'it', 'ja']
     src_l = select_lang.select("SELECT YOUR SOURCE LANGUAGE:\n".colorize(:blue), languages)
     trg_l = select_lang.select("SELECT THE TARGED LANGUAGE:\n".colorize(:blue), languages)
+
     if src_l == trg_l
       puts "PLEASE SELECT TWO DISTINCT LANGUAGES".colorize(:red)
       next
