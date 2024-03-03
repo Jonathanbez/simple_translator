@@ -2,7 +2,7 @@ class Saver_text
   def save_log(src_sentence, output)
     time = Time.now
     date = time.strftime('%d-%m-%Y %H:%M:%S')
-    File.open("Tradution in- #{date}.txt", 'w') do |saver|
+    File.open("Tradution in - #{date}.txt", 'w') do |saver|
       saver.puts "Input text: #{src_sentence}"
       saver.puts "Output text: #{output}"
     end
