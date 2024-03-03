@@ -1,8 +1,5 @@
 require 'net/http'
 require 'json'
-require 'uri'
-
-
 
 class Translator
   def translater(src_sentence, src_l, trg_l)

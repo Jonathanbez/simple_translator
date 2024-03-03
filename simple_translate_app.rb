@@ -17,7 +17,6 @@ loop do
     'fr' => "French",
     'it' => "Italian",
     'ja' => "Japanese"}
-
     src_l = select_lang.select("SELECT YOUR SOURCE LANGUAGE:\n".colorize(:blue), languages.values)
     src_l_key = languages.key(src_l)
     trg_l = select_lang.select("SELECT THE TARGED LANGUAGE:\n".colorize(:blue), languages.values)
