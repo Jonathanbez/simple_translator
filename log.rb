@@ -1,5 +1,3 @@
-
-
 class Saver_text
   def save_log(src_sentence, output)
     time = Time.now
