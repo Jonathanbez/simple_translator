@@ -10,7 +10,7 @@ loop do
     puts "SIMPLE TRANSLATER APP(Supports UTF-8 encoding and a maximum of 500 bytes)\n\n".colorize(:blue)
 
     select_lang = TTY::Prompt.new
-    languages = ['en'.colorize(:blue), 'pt-BR'.colorize(:blue), 'es'.colorize(:blue), 'fr'.colorize(:blue)]
+    languages = ['en', 'pt-BR', 'es', 'fr']
     src_l = select_lang.select("SELECT YOUR SOURCE LANGUAGE:\n".colorize(:blue), languages)
     trg_l = select_lang.select("SELECT THE TARGED LANGUAGE:\n".colorize(:blue), languages)
     if src_l == trg_l
@@ -34,7 +34,7 @@ loop do
     puts "YOUR TRANSLATER:\n#{output}\n\n".colorize(:green)
 
     save_prompt = TTY::Prompt.new
-    select_s = ['YES'.colorize(:blue), 'NO'.colorize(:blue)]
+    select_s = ['YES', 'NO']
     q_save = save_prompt.select("SAVE TRANSLATION TO LOG?".colorize(:blue), select_s)
     if q_save == 'YES'
         s_file = Saver_text.new
@@ -42,7 +42,7 @@ loop do
     end
 
     loop_prompt = TTY::Prompt.new
-      select = ['YES'.colorize(:blue), 'NO'.colorize(:blue)]
+      select = ['YES', 'NO']
     select_loop = loop_prompt.select("\nDO YOU WANT TO TRY AGAIN".colorize(:blue), select)
   break if select_loop == 'NO'
 end
