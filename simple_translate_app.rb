@@ -32,15 +32,16 @@ loop do
 
     puts "YOUR TRANSLATER:\n#{output}\n\n"
 
-      save_prompt = TTY::Prompt.new
-        select_s = ['YES', 'NO']
-        if q_save == 'NO'
-          s_file = Saver_text.new
-          s_file.save_log(src_sentence, output)
-        else next
+    save_prompt = TTY::Prompt.new
+    select_s = ['YES', 'NO']
+    q_save = save_prompt.select("SAVE TRANSLATION TO LOG?", select_s)
+    if q_save == 'YES'
+        s_file = Saver_text.new
+        s_file.save_log(src_sentence, output)
+    end
 
     loop_prompt = TTY::Prompt.new
       select = ['YES', 'NO']
-    select_loop = loop_prompt.select("DO YOU WANT TO TRY AGAIN", select)
+    select_loop = loop_prompt.select("\nDO YOU WANT TO TRY AGAIN", select)
   break if select_loop == 'NO'
 end
