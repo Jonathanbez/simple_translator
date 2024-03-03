@@ -2,6 +2,7 @@
 require_relative 'translator'
 require_relative 'log'
 require 'tty-prompt'
+require 'tty-spinner'
 
 loop do
   system 'clear'
@@ -20,9 +21,15 @@ loop do
     src_sentence = gets.chomp
     puts "\n"
 
+    spinner = TTY::Spinner.new("[:spinner] Loading ...", format: :pulse_2)
+
+    spinner.auto_spin
     translater_output = Translator.new
     output = translater_output.translater(src_sentence, src_l, trg_l)
+
+
     puts "YOUR TRANSLATER:\n#{output}\n\n"
+
     s_file = Saver_text.new
     s_file.save_log(src_sentence, output)
 
