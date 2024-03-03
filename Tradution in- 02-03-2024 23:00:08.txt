@@ -1,2 +1,0 @@
-Input text: Eu quero um pouco de agua, por favor.
-Output text: Quiero un poco de agua, por favor.

@@ -32,8 +32,12 @@ loop do
 
     puts "YOUR TRANSLATER:\n#{output}\n\n"
 
-    s_file = Saver_text.new
-    s_file.save_log(src_sentence, output)
+      save_prompt = TTY::Prompt.new
+        select_s = ['YES', 'NO']
+        if q_save == 'NO'
+          s_file = Saver_text.new
+          s_file.save_log(src_sentence, output)
+        else next
 
     loop_prompt = TTY::Prompt.new
       select = ['YES', 'NO']
