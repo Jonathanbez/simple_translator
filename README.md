@@ -1,5 +1,5 @@
 <h3 align="center">
- Simple Tradutor
+ SIMPLE TRADUTOR APP
 </h3>
 
 <p align="center">
