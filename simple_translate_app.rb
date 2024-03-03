@@ -10,14 +10,14 @@ loop do
 
     select_lang = TTY::Prompt.new
     languages = %w[en pt-BR es fr]
-    src_l = select_lang.select('SELECT YOUR SOURCE LANGUAGE:\n', languages)
-    trg_l = select_lang.select('SELECT THE TARGED LANGUAGE:\n', languages)
+    src_l = select_lang.select("SELECT YOUR SOURCE LANGUAGE:\n", languages)
+    trg_l = select_lang.select("SELECT THE TARGED LANGUAGE:\n", languages)
     if src_l == trg_l
       puts "PLEASE SELECT TWO DISTINCT LANGUAGES"
       next
     end
 
-    puts "WRITE YOUR SENTENCE:\n"
+    puts "\nWRITE YOUR SENTENCE:\n"
     src_sentence = gets.chomp
     puts "\n"
 
