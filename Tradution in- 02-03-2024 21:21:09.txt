@@ -1,2 +1,0 @@
-Input text: hello
-Output text: olá

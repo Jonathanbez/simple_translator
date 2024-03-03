@@ -1,2 +1,0 @@
-Input text: hello
-Output text: #<Thread:0x00007fce561f1ec8 /usr/share/rvm/gems/ruby-3.2.2/gems/tty-spinner-0.9.3/lib/tty/spinner.rb:308 dead>
