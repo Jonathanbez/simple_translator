@@ -22,11 +22,14 @@ loop do
     puts "\n"
 
 
-    spinner = TTY::Spinner.new("[:spinner] Loading ...", format: :pulse_2)
+    spinner = TTY::Spinner.new("[:spinner] Loading ...", format: :dots)
+    spinner = TTY::Spinner.new(clear: true)
     spinner.auto_spin
+
     translater_output = Translator.new
     output = translater_output.translater(src_sentence, src_l, trg_l)
-    spinner.success(output)
+    spinner.stop
+    spinner1.success
 
 
     puts "YOUR TRANSLATER:\n#{output}\n\n"
