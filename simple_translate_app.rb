@@ -21,12 +21,15 @@ loop do
     src_sentence = gets.chomp
     puts "\n"
 
-    spinner = TTY::Spinner.new("[:spinner] Loading ...", format: :pulse_2)
 
-    spinner.auto_spin
+
     translater_output = Translator.new
     output = translater_output.translater(src_sentence, src_l, trg_l)
 
+    spinner = TTY::Spinner.new("[:spinner] Loading ...", format: :pulse_2)
+    spinner.run do |spinner|
+      spinner.stop(output)
+    end
 
     puts "YOUR TRANSLATER:\n#{output}\n\n"
 
