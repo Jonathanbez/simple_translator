@@ -32,7 +32,7 @@
 ## 🚀 Technologies
 
 Technologies that I used to develop this software:
- <td align="left">
+ <td >
   
   - [Ruby](https://ruby-doc.org/)
 
