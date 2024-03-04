@@ -32,6 +32,9 @@
 ## 🚀 Technologies
 
 Technologies that I used to develop this software:
+ <td align="left">
+        <img height="30" align="center" src="https://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg" />
+    </td>
 
 - [Ruby](https://ruby-doc.org/)
 
