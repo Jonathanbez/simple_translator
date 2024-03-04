@@ -1,0 +1,5 @@
+source 'http://rubygems.org'
+
+gem 'tty-prompt'
+gem "tty-spinner"
+gem 'colorize'
