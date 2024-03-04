@@ -8,10 +8,6 @@ require 'colorize'
 system 'clear'
 puts "SIMPLE TRANSLATER APP(Supports UTF-8 encoding and a maximum of 500 bytes)\n".colorize(:blue)
 loop do
-
-
-
-
     languages = {
     'en' => "English",
     'es' => "Spanish",
@@ -30,10 +26,9 @@ loop do
       next
     end
 
-    puts "\nWRITE YOUR SENTENCE:\n".colorize(:blue)
+    puts "\nWRITE YOUR SENTENCE:".colorize(:blue)
     src_sentence = gets.chomp
     puts "\n"
-
 
     spinner = TTY::Spinner.new("[:spinner] Loading ...".colorize(:blue), format: :classic)
     spinner.auto_spin
