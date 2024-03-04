@@ -21,9 +21,9 @@ loop do
     src_l_key = languages.key(src_l)
     trg_l = select_lang.select("SELECT THE TARGED LANGUAGE:\n".colorize(:blue), languages.values)
     trg_l_key = languages.key(trg_l)
-    if src_l == trg_l
+    if src_l_key == trg_l_key
       puts "PLEASE SELECT TWO DISTINCT LANGUAGES".colorize(:red)
-      next
+      next 
     end
 
     puts "\nWRITE YOUR SENTENCE:\n".colorize(:blue)
