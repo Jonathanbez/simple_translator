@@ -21,11 +21,9 @@
   <a href="#-getting-started">Getting started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-how-to-contribute">How to contribute</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-license">License</a>
- 
- [![Imagem da aplicação de linha de comando em execução no youtube](./simple_translation_demostration.gif)](https://youtu.be/U7dei1spUq8)
-
 </p>
 
+ [![Imagem da execução da aplicação](./simple_translation_demostration.gif)](https://youtu.be/U7dei1spUq8)
 
 ## 👨🏻‍💻 About the project
 
