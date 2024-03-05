@@ -23,7 +23,7 @@
   <a href="#-license">License</a>
 </p>
 
-![Imagem da execução da aplicação](./img/rates_app.gif)
+[![Imagem da aplicação de linha de comando em execução no youtube](./simple_translation_demostration.gif)](https://youtu.be/U7dei1spUq8)
 
 ## 👨🏻‍💻 About the project
 
@@ -36,8 +36,6 @@ Technologies that I used to develop this software:
   <a href="https://ruby-doc.org/">Ruby</a>
   <img height="30" align="center" src="https://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg" style="margin-left: 5px;" />
 </td>
-
-
 
 
 ## 💻 Getting started
