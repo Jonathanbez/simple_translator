@@ -1,0 +1,2 @@
+Input text: I'm a developer, and you?
+Output text: Eu sou um desenvolvedor, e você?
