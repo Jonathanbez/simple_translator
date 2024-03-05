@@ -23,7 +23,13 @@
   <a href="#-license">License</a>
 </p>
 
+<p align="center">
+ 
  [![Imagem da execução da aplicação](./simple_translation_demostration.gif)](https://youtu.be/U7dei1spUq8)
+ 
+ </p>
+
+
 
 ## 👨🏻‍💻 About the project
 
