@@ -35,7 +35,7 @@
 ## 🚀 Technologies
 
 Technologies that I used to develop this software:
-* **Ruby** (https://www.ruby-lang.org) <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg" alt="Ruby logo" style="height: 25px; margin-left: 6px;" />
+* <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg" alt="Ruby logo" style="height: 25px; margin-left: 6px;" /> **Ruby** (https://www.ruby-lang.org) 
 
 
 ## 💻 Getting started
