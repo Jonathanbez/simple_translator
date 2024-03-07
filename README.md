@@ -24,11 +24,8 @@
 </p>
 
 <p align="center">
- 
- [![Imagem da execução da aplicação](./simple_translation_demostration.gif)](https://youtu.be/U7dei1spUq8)
- 
- </p>
-
+  <a href="https://youtu.be/U7dei1spUq8"><img alt="Simple Translator App Demo" src="./simple_translation_demostration.gif" style="width: 100%; max-width: 600px;" /></a>
+</p>
 
 
 ## 👨🏻‍💻 About the project
